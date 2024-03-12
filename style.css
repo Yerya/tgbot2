@@ -38,6 +38,7 @@ h1{
     flex-wrap: wrap;
     overflow: auto;
 }
+
 main{
     display: flex;
     flex: 1;
