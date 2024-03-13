@@ -9,6 +9,7 @@
 :root {
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-gray: #ad9e9e;
     font-size: calc(.7vw + .6vh);
 }
 
@@ -60,6 +61,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .tg-blue{
@@ -117,4 +119,34 @@ main{
     /* object-fit: cover; */
     z-index: 100;
     object-fit: cover;
+}
+
+.swiper {
+    width: 45rem;
+    height: 15rem;
+    box-shadow: 0 0 2rem rgba(240, 252, 255, 0.8);
+    border-radius: 1rem;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-gray); /* Change to the color you want */
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--color-gray); /* Change to the color you want */
+}
+
+/* Установка размера стрелок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 4rem; /* Размер стрелок */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }
