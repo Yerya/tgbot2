@@ -59,6 +59,7 @@ button {
     box-shadow: 0 0 2rem rgba(33, 203, 237, 0.8);
     border-radius: 1rem;
     padding: 0.5rem;
+    animation: pulse 2s infinite;
 }
 
 .sub-title>*:not(:last-child)::after {
@@ -203,5 +204,18 @@ main{
         flex-wrap: wrap;
         flex-direction: row;
         gap: 2rem;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
     }
 }
