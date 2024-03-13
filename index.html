@@ -7,29 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css">
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        var queryParams = new URLSearchParams(window.location.search);
+        var customParam = queryParams.get('pixel');
+        fbq('init', customParam);
+        fbq('track', 'PageView');
+    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <main>
-            это мейн
-            <section class="title">
-                <h3>йо</h3>
-                <h1>ку</h1>
-            </section>
-            <div class="div-telegram">
-                <a class="tgme_action_button_new shine" href="tg://join?invite=CЮДА_КОД_ПРИГЛОСА_В_КАНАЛ"
-                    onclick="fbq('track', 'Lead'); return true;">
-                    <button class="custom-button">
-                        <div class="button-telegram">
-                            <h2>telegram bot</h2>
-                            <div class="img-telegram">
-                                <img class="tg-blue" src="./assets/iconmonstr-telegram-1.svg" alt="">
+            <nav class="main_info">
+                <section class="title">
+                    <h4 class="sub-title"><p>получай сигнал</p><p>делай ставку</p><p>выводи деньги</p></h4>
+                    <h1>бот помощник</h1>
+                </section>
+                <div class="div-telegram">
+                    <a class="tgme_action_button_new shine" href="tg://join?invite=CЮДА_КОД_ПРИГЛОСА_В_КАНАЛ"
+                        onclick="fbq('track', 'Lead'); return true;">
+                        <button class="custom-button">
+                            <div class="button-telegram">
+                                <h2>telegram bot</h2>
+                                <div class="img-telegram">
+                                    <img class="tg-blue" src="./assets/iconmonstr-telegram-1.svg" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </button>
-                </a>
-            </div>
+                        </button>
+                    </a>
+                </div>
+            </nav>
+
             <section class="laptop">
                 <div class="laptop__div">
                     <img class="laptop__img" src="./assets/laptopimg.png" alt="">
@@ -40,8 +56,8 @@
             </section>
             <!-- Slider main container -->
             <nav class="reviews">
-                <h3>доп инфа</h3>
-                <h2>Отзывы</h2>
+                <h4>Что говорят клиенты?</h4>
+                <h3>Наши отзывы</h3>
 
                 <div class="swiper">
                     <!-- Additional required wrapper -->

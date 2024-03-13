@@ -10,6 +10,7 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-gray: #ad9e9e;
+    --color-sand: #db9e35;
     font-size: calc(.7vw + .6vh);
 }
 
@@ -17,17 +18,34 @@ html, body {
     font-family: 'Inter', sans-serif;
     color: var(--color-white);
     background-color: var(--color-black);
-    /* overflow: hidden; */
+}
+
+h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 500;
 }
 
 h3{
     font-size: 3rem;
 }
 
-h2 {
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 2px;
+h4{
+    font-size: 1.8rem;
+    display: flex;
+    color: var(--color-sand);
+    font-weight: normal;
+}
+
+
+.sub-title{
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -43,9 +61,14 @@ button {
     padding: 0.5rem;
 }
 
-
-h1{
-    font-size: 5rem;
+.sub-title>*:not(:last-child)::after {
+    content: '';
+    width: 0.2rem; /* Регулируйте размер и стилизацию вашего псевдоэлемента */
+    height: 1.2rem;
+    background-color: var(--color-sand); /* Цвет и стили вашего псевдоэлемента */
+    display: inline-block;
+    margin-left: 0.5rem; /* Расстояние между элементами */
+    margin-right: 0.5rem; /* Расстояние между элементами */
 }
 
 .wrapper{
@@ -58,10 +81,11 @@ h1{
 main{
     display: flex;
     flex: 1;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    gap: 8rem;
+    flex-direction: column;
 }
 
 .tg-blue{
@@ -80,7 +104,9 @@ main{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    gap: 1rem;
 }
+
 
 .laptop{
     display: flex;
@@ -102,10 +128,13 @@ main{
     align-items: center;
 }
 
+.reviews > *:not(:first-child):not(:last-child) {
+    margin-bottom: 2rem;
+}
+
 .laptop{
     position: relative;
 }
-
 
 .laptop video {
     position: absolute;
@@ -127,6 +156,7 @@ main{
     box-shadow: 0 0 2rem rgba(240, 252, 255, 0.8);
     border-radius: 1rem;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--color-gray); /* Change to the color you want */
@@ -149,4 +179,29 @@ main{
     padding: 1rem;
     font-size: 2rem;
     text-align: center;
+}
+
+.main_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .laptop__div{
+        width: 35rem;
+    }
+
+    .swiper {
+        width: 30rem;
+        height: 10rem;
+    }
+
+    main{
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
